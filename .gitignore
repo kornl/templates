@@ -30,3 +30,7 @@
 *.vrb
 *.xdy
 *.tdo
+*~
+knitr_vignette.tex
+knitr_vignette.pdf
+*-concordance.tex

@@ -1,0 +1,135 @@
+\documentclass[a4paper, 10pt]{article}
+
+\usepackage[utf8x]{inputenc}
+\usepackage[left=4cm,right=3.5cm,top=2.5cm,bottom=2.5cm]{geometry}
+
+\usepackage{natbib}
+\bibliographystyle{plainnat}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage{natbib}
+\usepackage{hyperref}
+\usepackage{microtype}
+\usepackage{xspace}
+\usepackage{bm}
+\usepackage{fancyhdr}
+\usepackage{appendix}
+\usepackage{url}
+\usepackage{tikz}
+\usepackage{listings}
+\usepackage{cleveref}
+\usepackage{framed}
+\usepackage{tabularx}
+
+\usepackage{makeidx}\makeindex
+
+\setlength{\parindent}{0mm}
+\setlength{\parskip}{1mm}
+
+\usepackage[nostamp]{draftwatermark} % Remove [nostamp] for a "DRAFT" watermark
+\SetWatermarkLightness{0.9}
+\SetWatermarkScale{5}
+
+\usepackage{setspace}
+\onehalfspacing
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[EL]{\thepage}% even pages, left side
+\fancyhead[OR]{\thepage}% odd pages, right side
+\fancyhead[ER]{
+\begin{tabular}[b]{l}
+Abteilung\\
+Mitarbeiter\\
+Titel
+\end{tabular}
+%\includegraphics[height=3\baselineskip]{logo}
+}
+\fancyhead[OL]{
+%\includegraphics[height=3\baselineskip]{logo}
+\begin{tabular}[b]{l}
+Abteilung\\
+Mitarbeiter\\
+Titel
+\end{tabular}
+}
+\addtolength{\headheight}{2\baselineskip}
+\addtolength{\headheight}{0.61pt}
+
+\newcommand{\R}{\ensuremath{\mathbb{R}}\xspace}
+\newcommand{\Q}{\ensuremath{\mathbb{Q}}\xspace}
+\newcommand{\Z}{\ensuremath{\mathbb{Z}}\xspace}
+\newcommand{\N}{\ensuremath{\mathbb{N}}\xspace}
+
+\newcommand{\skp}[1]{\left\langle#1\right\rangle}
+
+\newenvironment{Proof}{\par\noindent\upshape\textit{Proof. }\nopagebreak}{\qed\par}
+
+\begin{document}
+
+%\VignetteEngine{knitr}
+%\VignetteIndexEntry{TITLE}
+
+\title{TITLE} 
+
+\author{AUTHOR}
+
+\maketitle
+
+\tableofcontents
+
+<<OptionsAndLibraries, include=FALSE, message=FALSE>>=
+if (exists("opts_chunk")) {
+  opts_chunk$set(concordance=TRUE)
+  opts_chunk$set(tidy.opts=list(keep.blank.line=FALSE, width.cutoff=95))
+  opts_chunk$set(size="scriptsize") 
+}
+#library(xyz, quietly=TRUE)
+options(width=128)
+options(digits=4)
+@
+
+\newpage
+
+\section{Section I}
+
+\begin{appendix} 
+
+\section{Appendix I}
+
+\end{appendix}
+
+\nocite{*}
+
+\newpage
+
+\addcontentsline{toc}{section}{Index}
+\printindex
+
+%\newpage
+%\listofalgorithms
+%\listoffigures
+%\listoftables
+
+\newpage
+
+\addcontentsline{toc}{section}{Literatur}
+\bibliography{literatur}
+
+\addcontentsline{toc}{section}{Table of Symbols}
+\section*{Table of Symbols}\footnotesize
+%\twocolumn[\section{Table of Symbols}]
+\begin{tabularx}{\textwidth}{lX}
+\multicolumn{2}{l}{\textbf{Sets}}\\
+\R& set of real numbers\\
+\N& set of natural numbers (without 0)\\
+\end{tabularx}
+%\onecolumn
+\normalsize
+
+\end{document}
+
+
