@@ -1,0 +1,13 @@
+Package: RGUIpackage
+Type: Package
+Title: What the package does (short line)
+Version: 1.0
+Date: 2013-07-09
+Author: Who wrote it
+Maintainer: Who to complain to <yourfault@somewhere.net>
+Description: More about what it does (maybe more than one line)
+Depends: R (>= 3.0.0), rJava (>= 0.8-3), CommonJavaJars (>= 1.0.3)
+Suggests: knitr, RUnit
+SystemRequirements: Java (>= 5.0) 
+VignetteBuilder: knitr
+License: What license is it under?
