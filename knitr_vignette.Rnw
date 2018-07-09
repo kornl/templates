@@ -79,6 +79,9 @@ Titel
 
 \maketitle
 
+V1.\Sexpr{system("git rev-list HEAD --count", intern=TRUE)}, SHA-1 hash:\\
+\texttt{\Sexpr{system("git rev-parse HEAD", intern=TRUE)}}
+
 \tableofcontents
 
 <<OptionsAndLibraries, include=FALSE, message=FALSE>>=
